@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<Button
+    android:id="@+id/hbd"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/happy_birthday"/>
+    <Button
+        android:id="@+id/congo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/congratulations"/>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:text="MONTHNAME"
+    android:id="@+id/mname"
+    android:textSize="20sp"
+    android:layout_gravity="center"
+    android:textStyle="bold"/>
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:layout_width="90dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/dates">
+    </ListView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/dates"
+        android:layout_toEndOf="@id/dates"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/adde"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/add_event"
+            />
+            <Button
+                android:id="@+id/dele"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_all"
+                />
+
+            <Button
+                android:id="@+id/refresh"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/refresh_list"
+                />
+        </LinearLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/listofevents"
+        />
+    </LinearLayout>
+</RelativeLayout>
+</LinearLayout>
